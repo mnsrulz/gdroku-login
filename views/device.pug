@@ -1,0 +1,29 @@
+doctype html  
+html(lang='en')  
+  head
+    title Google Drive Roku Authentication
+    link(href="https://fonts.googleapis.com/css?family=Roboto+Mono", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet") 
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    style
+      include style.css
+  body
+    include header.pug
+    main
+      div.container
+        h3 Authenticate your Google Drive account
+        div.row
+          form(action="", method="post", class="col s12")
+            div.row
+              div(class="input-field col s12")
+                input(name="code",id="code", data-length="8",autocomplete="off", class="validate", placeholder="Code")
+                //- label(for="code") Code
+                button(type="submit", class="waves-effect waves-light btn-large") Submit
+              //- input(type="text", name="code", autocomplete="off")
+              //- button(type="submit", class="waves-effect waves-light btn-large") Submit
+    include footer.pug
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+    script.
+      $(()=>{console.log('Welcome here. If you are reading this message, then please visit the github link on the top of page.');M.AutoInit();$('input#code').characterCounter();$('input#code').focus();})

@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}\\app.js",
+            "env": {
+                "GOOGLE_CLIENT_ID": "576163288698-fksrsd5lum45ho67bpjjnhincedm3jip.apps.googleusercontent.com",
+                "GOOGLE_CLIENT_SECRET": "vemWwnfQaq_IiZq9T92LXWTk",
+                "GOOGLE_REDIRECT_URI": "https://apighost.herokuapp.com/auth/google/callback",
+                "GOOGLE_REDIRECT_URI_DEVICE":"http://localhost:3000/device/callback",
+                "GOOGLE_SCOPES":"https://www.googleapis.com/auth/youtube,https://www.googleapis.com/auth/youtube.upload,https://www.googleapis.com/auth/drive"
+            }
+        }
+    ]
+}
